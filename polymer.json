@@ -1,21 +1,32 @@
 {
-  "entrypoint": "index.html",
-  "shell": "src/start-polymer3.js",
-  "fragments": [
-    "src/lazy-element.js"
-  ],
+  "entrypoint": "src/index.html",
+  "shell": "src/import-components.js",
   "sources": [
-   "src/start-polymer3.js",
-   "manifest/**",
-   "package.json"
-  ],
-  "extraDependencies": [
-    "manifest.json",
-    "node_modules/@webcomponents/webcomponentsjs/**"
+    "package.json"
   ],
   "builds": [
-    { 
-      "preset": "es6-unbundled"
+    {
+      "name": "debug",
+      "addServiceWorker": false,
+      "addPushManifest": false,
+      "insertPrefetchLinks": false,
+      "bundle": {
+        "inlineCss": false,
+        "inlineScripts": false,
+        "rewriteUrlsInTemplates": false,
+        "sourcemaps": false,
+        "stripComments": false
+      },
+      "html": {
+        "minify": false
+      },
+      "css": {
+        "minify": false
+      },
+      "js": {
+        "minify": false,
+        "compile": false
+      }
     }
   ],
   "moduleResolution": "node",
