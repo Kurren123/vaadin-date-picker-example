@@ -4,29 +4,12 @@
   "sources": [
     "package.json"
   ],
+  "extraDependencies": [
+    "node_modules/@webcomponents/webcomponentsjs/**"
+  ],
   "builds": [
     {
-      "name": "debug",
-      "addServiceWorker": false,
-      "addPushManifest": false,
-      "insertPrefetchLinks": false,
-      "bundle": {
-        "inlineCss": false,
-        "inlineScripts": false,
-        "rewriteUrlsInTemplates": false,
-        "sourcemaps": false,
-        "stripComments": false
-      },
-      "html": {
-        "minify": false
-      },
-      "css": {
-        "minify": false
-      },
-      "js": {
-        "minify": false,
-        "compile": false
-      }
+      "preset": "es6-unbundled"
     }
   ],
   "moduleResolution": "node",

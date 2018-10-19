@@ -8,6 +8,7 @@
   "dependencies": {
     "@polymer/paper-checkbox": "latest",
     "@polymer/polymer": "latest",
+    "@vaadin/vaadin-date-picker": "^3.3.0-beta1",
     "@webcomponents/webcomponentsjs": "latest"
   }
 }
